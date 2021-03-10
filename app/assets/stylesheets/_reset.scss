@@ -1,0 +1,159 @@
+/*!
+ * YUI 3.5.0 - reset.css (http://developer.yahoo.com/yui/3/cssreset/)
+ * http://cssreset.com
+ * Copyright 2012 Yahoo! Inc. All rights reserved.
+ * http://yuilibrary.com/license/
+ */
+/*
+    TODO will need to remove settings on HTML since we can't namespace it.
+    TODO with the prefix, should I group by selector or property for weight savings?
+*/
+html{
+  color:#000;
+  font-size: 62.5%;
+  height: 100%;
+}
+/*
+  TODO remove settings on BODY since we can't namespace it.
+*/
+/*
+  TODO test putting a class on HEAD.
+      - Fails on FF.
+*/
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin:0;
+  padding:0;
+}
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+fieldset,
+img {
+  border:0;
+  vertical-align: bottom;
+}
+/*
+  TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style:normal;
+  font-weight:normal;
+}
+
+ol,
+ul {
+  list-style:none;
+}
+
+caption,
+th {
+  text-align:left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size:100%;
+  font-weight:normal;
+}
+q:before,
+q:after {
+  content:'';
+}
+abbr,
+acronym {
+  border:0;
+  font-variant:normal;
+}
+/* to preserve line-height and selector appearance */
+sup {
+  vertical-align:text-top;
+}
+sub {
+  vertical-align:text-bottom;
+}
+input,
+textarea,
+select {
+  font-family:inherit;
+  font-size:inherit;
+  font-weight:inherit;
+}
+/*to enable resizing for IE*/
+input,
+textarea,
+select {
+  *font-size:100%;
+}
+/*because legend doesn't inherit in IE */
+legend {
+  color:#000;
+}
+/* YUI CSS Detection Stamp */
+#yui3-css-stamp.cssreset { display: none; }
+
+main{
+    padding-top: 70px;
+}
+
+body {
+  background-color: #f5f1ee;
+  font-family: "Helvetica", "メイリオ", "Meiryo", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Osaka", "?E??E? ?E?ゴシチE??", "MS PGothic", sans-serif !important;
+  color: #555555;
+  line-height: 24px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  padding-top: 54px;
+}
+
+input {
+  display: inline-block;
+  height: 18px;
+  padding: 4px;
+  margin-bottom: 9px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #555;
+}
+
+label {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+}

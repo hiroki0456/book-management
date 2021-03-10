@@ -1,0 +1,78 @@
+.mypage-box {
+  width: 50%;
+  margin: 0 auto;
+  &__header-box {
+    background-color: white;
+    height: 200px;
+    padding: 20px 0 0 20px;
+    display: flex;
+    &__book-info {
+    margin-top: 10px;
+    border: 1px #f0f0f0 solid;
+    color: #a1a1a1;
+    }
+    &__header {
+      &__user-avator {
+        padding-left: 5px;
+      }
+      &__user-box {
+        width: 100%;
+        &__user-name {
+          margin-left: 30px;
+          font-size: 2rem;
+          color: black;
+          font-weight: 600;
+        }
+        &__link {
+          display: inline-block;
+          margin-left: 30px;
+          margin-top: 10px;
+          font-size: 2rem;
+          text-decoration: none;
+          color: skyblue;
+        }
+        &__items {
+          display: flex;
+          justify-content: space-between;
+          margin-left: 50px;
+          margin-top: 5px;
+          width: 80%;
+          &__list {
+            &__list-name {
+              font-size: 16px;
+              text-align: center;
+            }
+            &__list-number {
+              font-size: 16px;
+              text-align: center;
+              color: #4ea6cc;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__index {
+    border-top: 2px solid black;
+    &__item {
+      background-color: white;
+      display: flex;
+      border-bottom: 1px #cdcdcd solid;
+      &__list {
+        width: 30%;
+        display: inline-block;
+        padding: 25px;
+        font-size: 13px;
+        font-weight: bold;
+        background-color: #e8f6f5;
+        color: #656565;
+      }
+      &__name {
+        width: 50%;
+        margin: auto;
+        font-size: 13px;
+        padding-left: 5px;
+      }
+    }
+  }
+}

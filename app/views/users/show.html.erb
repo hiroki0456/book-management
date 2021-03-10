@@ -1,0 +1,64 @@
+<% if flash[:success] %>
+ <p class="success-message"><%= flash[:success] %></p>
+<% end %>
+<div class="mypage-box">
+  <div class="mypage-box__header-box">
+    <div class="mypage-box__header-box__header">
+      <div class="mypage-box__header-box__header__user-avator">
+        <%= link_to '#', class: "mypage-box__header-box__header__user-avator__link" do %>
+          <%= image_tag "face-logo.png", class: "mypage-box__header-box__header__user-avator__link__image", width: "60px", height: "60px" %>
+        <% end %>
+      </div>
+      <div class="mypage-box__header-box__book-info">あなたの本棚</div>
+    </div>
+    <div class="mypage-box__header-box__header__user-box">
+      <div class="mypage-box__header-box__header__user-box__user-name">hiroki0456さんのホーム</div>
+      <%= link_to "hiroki0456", "#", class: "mypage-box__header-box__header__user-box__link" %>
+      <ul class="mypage-box__header-box__header__user-box__items">
+        <li class="mypage-box__header-box__header__user-box__items__list">
+          <div class="mypage-box__header-box__header__user-box__items__list__list-name">登録者</div>
+          <div class="mypage-box__header-box__header__user-box__items__list__list-number">0</div>
+        </li>
+        <li class="mypage-box__header-box__header__user-box__items__list">
+          <div class="mypage-box__header-box__header__user-box__items__list__list-name">レビュー</div>
+          <div class="mypage-box__header-box__header__user-box__items__list__list-number">0</div>
+        </li>
+        <li class="mypage-box__header-box__header__user-box__items__list">
+          <div class="mypage-box__header-box__header__user-box__items__list__list-name">レビュー率</div>
+          <div class="mypage-box__header-box__header__user-box__items__list__list-number">0<span>%</span></div>
+        </li>
+        <li class="mypage-box__header-box__header__user-box__items__list">
+          <div class="mypage-box__header-box__header__user-box__items__list__list-name">フォロー</div>
+          <div class="mypage-box__header-box__header__user-box__items__list__list-number">0</div>
+        </li>
+        <li class="mypage-box__header-box__header__user-box__items__list">
+          <div class="mypage-box__header-box__header__user-box__items__list__list-name">フォロワー</div>
+          <div class="mypage-box__header-box__header__user-box__items__list__list-number">0</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <%= link_to "プロフィールを設定する",  profile_edit_user_path(current_user), class: "mypage-box__profile-edit" %>
+  <div class="mypage-box__index">
+    <div class="mypage-box__index__item">
+      <div class="mypage-box__index__item__list">ニックネーム</div>
+      <div class="mypage-box__index__item__name"><%= @profile.nickname unless @profile.nil? %></div>
+    </div>
+    <div class="mypage-box__index__item">
+      <div class="mypage-box__index__item__list">本棚の名前</div>
+      <div class="mypage-box__index__item__name"><%= @profile.nickname unless @profile.nil? %></div>
+    </div>
+    <div class="mypage-box__index__item">
+      <div class="mypage-box__index__item__list">本棚の紹介文</div>
+      <div class="mypage-box__index__item__name"><%= @profile.nickname unless @profile.nil? %></div>
+    </div>
+    <div class="mypage-box__index__item">
+      <div class="mypage-box__index__item__list">性別</div>
+      <div class="mypage-box__index__item__name"><%= @profile.gender unless @profile.nil? %></div>
+    </div>
+    <div class="mypage-box__index__item">
+      <div class="mypage-box__index__item__list">プロフィール</div>
+      <div class="mypage-box__index__item__name"><%= @profile.content unless @profile.nil? %></div>
+    </div>
+  </div>
+</div>

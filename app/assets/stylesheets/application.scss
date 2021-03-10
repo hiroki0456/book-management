@@ -1,0 +1,119 @@
+@import 'reset';
+@import "users/*";
+
+/* -----header----- */
+.nav-bar {
+  width: 100vw;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: #4ea6cc;
+  &__top {
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    &__link {
+      text-decoration: none;
+      &__logo {
+        font-size: 3rem;
+        line-height: 50px;
+        font-style: italic;
+        color: white;
+      }
+    }
+    &__book-search {
+        width: 400px;
+        position: relative;
+      &__form {
+        height: 50px;
+        display: flex;
+        position: absolute;
+        top: 10px;
+        left: 100px;
+        width: 100%;
+        &__text {
+          width: 100%;
+          border: none;
+          outline: none;
+        }
+        &__select {
+          height: 26px;
+          border: none;
+          background-color: #ededed;
+          outline: none;
+        }
+        &__submit {
+          position: absolute;
+          right: 0px;
+          top: 2px;
+          border: none;
+          background-color: white;
+          outline: none;
+          cursor: pointer;
+        }
+      }
+    }
+    &__new-regist {
+      display: inline-block;
+      border-radius: 7px;
+      border: solid 1px #f5b629;
+      background-color: #f5b629;
+      color: white;
+      font-weight: bolder;
+      font-size: 15px;
+      text-decoration: none;
+      width: 150px;
+      margin: 10px 0;
+      text-align: center;
+      line-height: 25px;
+      position: absolute;
+      right: 170px;
+    }
+    &__login {
+      display: inline-block;
+      border-radius: 7px;
+      border: solid 1px white;
+      background-color: white;
+      color: #4ea6cc;
+      font-weight: bolder;
+      font-size: 15px;
+      text-decoration: none;
+      width: 150px;
+      margin: 10px 0;
+      text-align: center;
+      line-height: 25px;
+    }
+  }
+}
+
+/* -----content----- */
+#main {
+  padding-top: 50px;
+}
+
+/* -----エラーメッセージ----- */
+.error-message {
+  margin-left: 135px;
+  color: red;
+  font-size: 14px;
+}
+
+.success-message {
+  background-color: #33CC33;
+  text-align: center;
+  color: white;
+  font-size: 13px;
+  animation: fadein-keyframes 3s ease 0s 1 forwards;
+}
+
+
+@keyframes fadein-keyframes {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

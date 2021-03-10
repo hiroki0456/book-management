@@ -1,0 +1,42 @@
+<div class="profile-edit">
+  <div class="profile-edit__box">
+    <h1 class="profile-edit__box__text">プロフィールの設定</h1>
+    <div class="profile-edit__box__profile">
+      <%= form_with model: @profile, url: profile_update_user_path, html: {class: "profile-edit__box__profile__form-box"}, method: :post, local: true do |f| %>
+        <div class="profile-edit__box__profile__form-box__edit">
+          <%= f.label "ニックネーム", class: "profile-edit__box__profile__form-box__edit__label" %>
+          <%= f.text_field :nickname, class: "profile-edit__box__profile__form-box__edit__text", placeholder: "ニックネームを入力してください" %>
+        </div>
+        <div class="profile-edit__box__profile__form-box__edit">
+          <%= f.label "プロフィール画像", class: "profile-edit__box__profile__form-box__edit__label" %>
+          <%= f.file_field :image, class: "profile-edit__box__profile__form-box__edit__image" %>
+        </div>
+        <div class="profile-edit__box__profile__form-box__edit">
+          <%= f.label "自己紹介", class: "profile-edit__box__profile__form-box__edit__label" %>
+          <%= f.text_area :content, class: "profile-edit__box__profile__form-box__edit__text-area",row: 10, placeholder: "自己紹介を入力してください" %>
+        </div>
+        <div class="profile-edit__box__profile__form-box__edit">
+          <%= f.label "性別", class: "profile-edit__box__profile__form-box__edit__label" %>
+          <div class="profile-edit__box__profile__form-box__edit__select">
+            <%= f.collection_radio_buttons :gender, Profile.genders, :first, :first %>
+          </div>
+        </div>
+        <div class="profile-edit__box__profile__form-box__edit">
+          <%= f.label "性別", class: "profile-edit__box__profile__form-box__edit__label" %>
+          <div class="profile-edit__box__profile__form-box__edit__select">
+            <%== sprintf(f.date_select(:birthday, {start_year: 1960, use_month_numbers: true, prompt:'--', date_separator: '%s'}, class: 'profile-edit__box__profile__form-box__edit__select__box'),'年','月') + '日' %>
+          </div>
+        </div>
+        <div class="profile-edit__box__profile__form-box__edit">
+          <%= f.label "都道府県", class: "profile-edit__box__profile__form-box__edit__label" %>
+          <div class="profile-edit__box__profile__form-box__edit__select">
+            <%= f.collection_select :prefecture_id, Prefecture.all, :id, :name %>
+          </div>
+        </div>
+        <div class="profile-edit__box__profile__form-box__submit">
+          <%= f.submit "更新する" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

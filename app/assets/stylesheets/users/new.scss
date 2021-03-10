@@ -1,0 +1,52 @@
+.new-regist-box {
+  width: 80%;
+  margin: 0 auto;
+  &__regist-box {
+    margin: 0 auto;
+    width: 60%;
+    &__text {
+      font-size: 4rem;
+      margin-bottom: 25px;
+      color: black;
+      text-align: center;
+    }
+    &__text2 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    &__form-box {
+      background-color: white;
+      padding: 20px;
+      &__form {
+        &__field {
+          margin-bottom: 30px;
+          &__text {
+            display: inline-block;
+            width: 20%;
+          }
+          &__input {
+            width: 60%;
+            height: 40px;
+            box-sizing: border-box;
+            background: #fafafa;
+            border: solid 1px #dcdcdc;
+            border-radius: 6px;
+          }
+        }
+        &__submit-box {
+          text-align: center;
+          &__btn {
+            width: 50%;
+            height: 40px;
+            border: none;
+            border-radius: 10px;
+            background-color: #f5b629;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

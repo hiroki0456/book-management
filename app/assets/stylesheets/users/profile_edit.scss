@@ -1,0 +1,95 @@
+.profile-edit {
+  width: 40%;
+  margin: 0 auto;
+  &__box {
+    &__text {
+      font-size: 3rem;
+      text-align: center;
+      color: black;
+      margin-bottom: 20px;
+    }
+    &__profile {
+      border-top: 2px solid black;
+      &__form-box {
+        background-color: white;
+        &__edit {
+          display: flex;
+          border-bottom: 1px #cdcdcd solid;
+          &__label {
+            width: 30%;
+            display: inline-block;
+            padding: 25px;
+            font-size: 13px;
+            font-weight: bold;
+            background-color: #e8f6f5;
+            color: #656565;
+          }
+          &__text {
+            width: 50%;
+            margin: auto;
+            border: 1px solid #999;
+            border-radius: 4px;
+            height: 30px;
+            font-size: 13px;
+            padding-left: 5px;
+          }
+          &__text:focus {
+            border: 1px solid #ff9900;
+            background-color: #FDF5E6;
+            outline: 0;
+          }
+          &__image {
+            width: 50%;
+            margin: auto;
+            height: 30px;
+            font-size: 13px;
+            padding-left: 5px;
+          }
+          &__text-area {
+            width: 50%;
+            font-size: 13px;
+            padding-left: 5px;
+            height: 250px;
+            margin: 20px auto;
+            resize: vertical;
+          }
+          &__text-area:focus {
+            border: 1px solid #ff9900;
+            background-color: #FDF5E6;
+            outline: 0;
+          }
+          &__select {
+            padding: 25px;
+            width: 50%;
+            input[type="radio"] {
+              margin-left: 10px;
+              height: 12px;
+            }
+            &__box {
+              height: 40px;
+              width: 20%;
+              border: 1px solid black;
+            }
+            #profile_prefecture_id {
+              height: 40px;
+              width: 30%;
+              border: 1px solid black;
+            }
+          }
+        }
+        &__submit {
+          width: 100%;
+          text-align: center;
+          padding: 20px;
+          input[type="submit"] {
+            height: 50px;
+            width: 40%;
+            margin: 0 auto;
+            border: none;
+            background-color: #e8f6f5;
+          }
+        }
+      }
+    }
+  }
+}

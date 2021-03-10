@@ -11,6 +11,36 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="nav-bar">
+        <div class="nav-bar__top">
+          <a href="#" class="nav-bar__top__link">
+            <div class="nav-bar__top__link__logo">Book Management</div>
+          </a>
+          <div class="nav-bar__top__book-search">
+            <form action="#" class="nav-bar__top__book-search__form">
+              <select name="category" class="nav-bar__top__book-search__form__select">
+                <option value="1">本</option>
+                <option value="2">紙の本</option>
+                <option value="3">Kindle</option>
+                <option value="4">DVD</option>
+                <option value="5">音楽</option>
+                <option value="6">すべて</option>
+              </select>
+              <input type="text" name="" class="nav-bar__top__book-search__form__text" placeholder="本のタイトル、著者名">
+              <button type="submit" class="nav-bar__top__book-search__form__submit"><%= image_tag "glass.jpeg", size: "20x20" %></button>
+            </form>
+          </div>
+          <% if !user_signed_in? %>
+            <%= link_to "新規会員登録", new_user_registration_path, class: "nav-bar__top__new-regist" %>
+            <%= link_to "ログイン", new_user_session_path, class: "nav-bar__top__login" %>
+          <% else %>
+            <%= link_to "マイページ", user_path(current_user), class: "nav-bar__top__new-regist" %>
+            <%= link_to "ログアウト", destroy_user_session_path, class: "nav-bar__top__login", method: :delete %>
+          <% end %>
+        </div>
+    </header>
+      <div id="main">
+        <%= yield %>
+      </div>
   </body>
 </html>

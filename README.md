@@ -4,7 +4,6 @@
 
 |column|type|option|
 |---------------|----------------|---------------|
-|book_log_id|string|null:false|
 |email|string|null:false, index:true|
 |encrypted_password|string|null:false|
 
@@ -25,3 +24,4 @@
 |author|string|null:false|
 release_date|date|null:false|
 
+## my_books table
